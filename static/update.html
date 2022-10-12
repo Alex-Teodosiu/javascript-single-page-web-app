@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <script src="update.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Update Data</h1>
+
+  <ul>
+    <li><a href="index.html">Fetch</a></li>
+    <li><a href="index_xml.html">XML</a></li>
+    <li><a href="update.html">Update Data</a></li>
+  </ul>
+
+  <br><br><br>
+
+  <form action="">
+    <label>Type:</label>
+    <input type="radio" name="type" id="temperature" value="temperature">
+    <label>Temperature</label>
+    <input type="radio" name="type" id="precipitation" value="precipitation">
+    <label>Precipitation</label>
+    <input type="radio" name="place" id="windSPeed" value="windSpeed">
+    <label>Wind Speed</label>
+    <br/>
+    <br/>
+    <label>City:</label>
+    <input type="radio" name="place" id="Horsens" value="Horsens">
+    <label for="Horsens">Horsens</label>
+    <input type="radio" name="place" id="Aarhus" value="Aarhus">
+    <label for="Aarhus">Aarhus</label>
+    <input type="radio" name="place" id="Copenhagen" value="Copenhagen">
+    <label for="Copenhagen">Copenhagen</label>
+    <br />
+    <br />
+    <label for="time">Date</label>
+    <input type="date" name="time" id="timeValue" required />
+    <br />
+    <br />
+    <label for="value">Value</label>
+    <input type="number" name="value" id="value" required />
+    <br/>
+    <br/>
+    <label for="direction">Wind direction</label>
+    <input type="text" name="direction" id="directionValue" />
+    <br/>
+    <br/>
+    <label for="precipitation">Precipitation type</label>
+    <input type="text" name="precipitation" id="precipitaitonValue" />
+    <br/>
+    <br/>
+    <button onclick="updateDataXHR()">Update (XHR)</button>
+    <button onclick="updateDataFetch()">Update (Fetch)</button>
+  </form>
+
+</body>
+
+</html>

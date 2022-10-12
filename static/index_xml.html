@@ -1,13 +1,12 @@
 <html>
 
 <head>
-  <script src="fetch.js"></script>
+  <script src="xml.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
-  <h1>Weather Web App - Post Data</h1>
+  <h1>Weather Web App - XML Data</h1>
 
   <ul>
     <li><a href="index.html">Fetch</a></li>
@@ -18,21 +17,22 @@
   <div class="dropdown" style="float:left;">
     <button class="dropbtn">City</button>
     <div class="dropdown-content" style="left:0;">
-      <a onclick="fetchData('Horsens')">Horsens</a>
-      <a onclick="fetchData('Aarhus')">Aarhus</a>
-      <a onclick="fetchData('Copenhagen')">Copenhagen</a>
+      <a onclick="update('Horsens')">Horsens</a>
+      <a onclick="update('Aarhus')">Aarhus</a>
+      <a onclick="update('Copenhagen')">Copenhagen</a>
     </div>
   </div>
 
   <br><br><br><br><br><br><br><br><br>
 
-  <h3 id="CityName">City Name</h3>
-  <table id="WeatherTable">
+  <h1>Data</h1>
+
+  <table id="forecastTable">
     <tr>
-      <th>Min temp (C)</th>
-      <th>Max temp (C)</th>
+      <th>Min Temp</th>
+      <th>Max Temp</th>
       <th>TimeStamp</th>
-      <th>City</th>
+      <th>Place</th>
     </tr>
   </table>
 
@@ -55,16 +55,16 @@
     </tr>
     <tr>
       <td>
-        <p id="LatestTemperature"></p>
+        <p id="lastTemp"></p>
       </td>
       <td>
-        <p id="LatestPrecipitation"></p>
+        <p id="lastPrecipitation"></p>
       </td>
       <td>
-        <p id="LatestWindSpeed"></p>
+        <p id="lastWindSpeed"></p>
       </td>
       <td>
-        <p id="LatestCloudCoverage"></p>
+        <p id="lastCloudCoverage"></p>
       </td>
     </tr>
   </table>
@@ -88,22 +88,23 @@
     </tr>
     <tr>
       <td>
-        <p id="MinTemperature"></p>
+        <p id="minTemperature"></p>
       </td>
       <td>
-        <p id="MaxTemperature"></p>
+        <p id="maxTemperature"></p>
       </td>
       <td>
-        <p id="TotalPrecipitation"></p>
+        <p id="totalPrecipitation"></p>
       </td>
       <td>
-        <p id="AverageWindSpeed"></p>
+        <p id="avgWind"></p>
       </td>
     </tr>
   </table>
 
 
   <br><br><br><br><br><br><br><br><br>
+
 </body>
 
 </html>
